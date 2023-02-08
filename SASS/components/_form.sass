@@ -6,13 +6,18 @@
     overflow: hidden
 
 .form
-    width: 60%
+    width: 70%
     padding-top: 5rem
     padding-left: 5rem
     &__group:not(:last-child)
         margin-bottom: 2rem
     &__group:nth-child(4)
         margin-bottom: 4rem
+    @include respond(tab-land)
+        &__group:not(:last-child)
+            margin-bottom: 0
+        &__group:nth-child(4)
+            margin-bottom: 2.5rem
     &__input
         font-size: $font-size-paragraph
         letter-spacing: .2rem
@@ -44,8 +49,13 @@
         transform: translateY(-2rem)
 
     &__group-radio
-        width: 40%
         display: inline-block
+        &:not(:last-child)
+            margin-right: 2rem
+        @include respond(tab-land)
+            display: block
+            &:not(:last-child)
+                margin-bottom: 2rem
     &__input-radio
         display: none
     &__label-radio
