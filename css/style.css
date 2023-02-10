@@ -468,7 +468,7 @@ body {
 @media (max-width: 900px) {
   /* line 1, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour {
-    height: 60rem;
+    height: auto;
   }
 }
 
@@ -490,57 +490,83 @@ body {
 @media (max-width: 900px) {
   /* line 8, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour__side {
-    height: 60rem;
+    height: auto;
+    position: relative;
   }
 }
 
-/* line 24, ../Project-baloons-3/SASS/components/_tour-card.sass */
+@media (max-width: 900px) {
+  /* line 23, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  .card-tour__side_front {
+    padding-bottom: 13rem;
+  }
+}
+
+/* line 27, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__side_back {
   background: green;
   transform: rotateY(180deg);
   background: linear-gradient(120deg, #BA8554, #A14F03);
 }
 
-/* line 29, ../Project-baloons-3/SASS/components/_tour-card.sass */
+@media (max-width: 900px) {
+  /* line 27, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  .card-tour__side_back {
+    transform: rotateY(0deg);
+    padding: 5rem;
+    padding-top: 12rem;
+    margin-top: -11rem;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  }
+}
+
+/* line 38, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour:hover .card-tour__side_front {
   transform: rotateY(-180deg);
 }
 
-/* line 31, ../Project-baloons-3/SASS/components/_tour-card.sass */
+@media (max-width: 900px) {
+  /* line 38, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  .card-tour:hover .card-tour__side_front {
+    transform: rotateY(0deg);
+  }
+}
+
+/* line 42, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour:hover .card-tour__side_back {
   transform: rotateY(0deg);
 }
 
-/* line 34, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 45, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__img {
   background-blend-mode: hard-light;
   height: 21rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
 
-/* line 38, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 49, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__img_1 {
   background: #BA8554 url(../img/card-1.jpg) center/cover no-repeat;
 }
 
-/* line 40, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 51, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__img_2 {
   background: #BA8554 url(../img/card-2.jpg) center/cover no-repeat;
 }
 
-/* line 42, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 53, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__img_3 {
   background: #BA8554 url(../img/card-3.jpg) center/cover no-repeat;
 }
 
 @media (max-width: 900px) {
-  /* line 34, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  /* line 45, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour__img {
     height: 30rem;
   }
 }
 
-/* line 46, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 57, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__title {
   font-size: 2.8rem;
   letter-spacing: 0.2rem;
@@ -553,20 +579,20 @@ body {
 }
 
 @media (max-width: 900px) {
-  /* line 46, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  /* line 57, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour__title {
     top: 25rem;
     font-size: 3.8rem;
   }
 }
 
-/* line 58, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 69, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__span {
   background: linear-gradient(90deg, #BA8554, #A14F03);
   padding: 1rem 2rem .3rem 2rem;
 }
 
-/* line 62, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 73, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__span_2 {
   position: absolute;
   top: 3.4rem;
@@ -576,13 +602,13 @@ body {
 }
 
 @media (max-width: 900px) {
-  /* line 62, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  /* line 73, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour__span_2 {
     top: 4.4rem;
   }
 }
 
-/* line 71, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 82, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__descr ul {
   list-style: none;
   width: 75%;
@@ -590,7 +616,7 @@ body {
   text-align: center;
 }
 
-/* line 76, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 87, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__descr ul li {
   font-size: 1.6rem;
   letter-spacing: .2rem;
@@ -600,26 +626,26 @@ body {
   width: auto;
 }
 
-/* line 83, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 94, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__descr ul li:not(:last-child) {
   margin-bottom: 2rem;
 }
 
 @media (max-width: 1240px) {
-  /* line 76, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  /* line 87, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour__descr ul li {
     font-size: 1.5erm;
   }
 }
 
 @media (max-width: 900px) {
-  /* line 76, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  /* line 87, ../Project-baloons-3/SASS/components/_tour-card.sass */
   .card-tour__descr ul li {
     font-size: 2rem;
   }
 }
 
-/* line 90, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 101, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__backSide-box {
   position: absolute;
   top: 50%;
@@ -627,7 +653,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* line 95, ../Project-baloons-3/SASS/components/_tour-card.sass */
+@media (max-width: 900px) {
+  /* line 101, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  .card-tour__backSide-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    text-align: center;
+  }
+}
+
+/* line 112, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__text {
   margin-bottom: 8rem;
   text-transform: uppercase;
@@ -636,13 +673,20 @@ body {
   letter-spacing: .2rem;
 }
 
-/* line 101, ../Project-baloons-3/SASS/components/_tour-card.sass */
+/* line 118, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__text_1 {
   font-size: 1.6rem;
   font-weight: 300;
 }
 
-/* line 104, ../Project-baloons-3/SASS/components/_tour-card.sass */
+@media (max-width: 900px) {
+  /* line 118, ../Project-baloons-3/SASS/components/_tour-card.sass */
+  .card-tour__text_1 {
+    font-size: 3rem;
+  }
+}
+
+/* line 123, ../Project-baloons-3/SASS/components/_tour-card.sass */
 .card-tour__text_2 {
   font-size: 6rem;
   font-weight: 500;
@@ -1120,11 +1164,12 @@ body {
 @media (max-width: 900px) {
   /* line 12, ../Project-baloons-3/SASS/layout/_footer.sass */
   .footer__item {
-    margin: 0 3rem 3rem 0;
+    margin: 0;
+    padding: 2rem;
   }
 }
 
-/* line 22, ../Project-baloons-3/SASS/layout/_footer.sass */
+/* line 23, ../Project-baloons-3/SASS/layout/_footer.sass */
 .footer__link:link, .footer__link:visited {
   color: #777777;
   text-decoration: none;
@@ -1136,7 +1181,7 @@ body {
   transition: all .3s;
 }
 
-/* line 32, ../Project-baloons-3/SASS/layout/_footer.sass */
+/* line 33, ../Project-baloons-3/SASS/layout/_footer.sass */
 .footer__link:hover {
   transform: rotate(5deg) scale(1.2);
   color: #A14F03;
@@ -1354,6 +1399,13 @@ body {
 .section-book {
   padding: 10rem;
   background: linear-gradient(90deg, #BA8554, #A14F03);
+}
+
+@media (max-width: 900px) {
+  /* line 26, ../Project-baloons-3/SASS/pages/_home.sass */
+  .section-book {
+    padding: 4rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
